@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "./images/react.png";
 
 function Header() {
@@ -29,17 +29,38 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active text-danger" : "nav-link"
+                  }
+                  aria-current="page"
+                  to="/"
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active text-danger" : "nav-link"
+                  }
+                  to="/about"
+                >
                   About
-                </Link>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active text-danger" : "nav-link"
+                  }
+                  to="/cryptodetail/btc"
+                >
+                  Crypto Details
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
-                <Link
+                <a
                   className="nav-link dropdown-toggle"
                   to="#"
                   role="button"
@@ -47,7 +68,7 @@ function Header() {
                   aria-expanded="false"
                 >
                   Products
-                </Link>
+                </a>
                 <ul className="dropdown-menu">
                   <li>
                     <Link className="dropdown-item" to="/product">
@@ -65,7 +86,7 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/product/details">
+                    <Link className="dropdown-item" to="/product/details/1">
                       Product Details
                     </Link>
                   </li>
