@@ -50,24 +50,23 @@ function Header() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/pages/product">
+                    <Link className="dropdown-item" to="/product">
                       Products
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/pages/productlist">
+                    <Link className="dropdown-item" to="/product/list">
                       Product List
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/pages/productdetails">
-                      Product Details
+                    <Link className="dropdown-item" to="/product/create">
+                      Product Create
                     </Link>
                   </li>
-
                   <li>
-                    <Link className="dropdown-item" to="/pages/createproduct">
-                      Create Product
+                    <Link className="dropdown-item" to="/product/details">
+                      Product Details
                     </Link>
                   </li>
                 </ul>
